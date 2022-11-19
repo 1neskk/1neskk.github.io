@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap');
+
+:root{
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+
+* {
+  margin: 0;
+  padding: -10px;
+  box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+  }
+
+
+body{
+    margin: 0;
+    padding: -10px;
+    background: #202020;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/*
+---------------------------
+      SCROLLBAR
+---------------------------
+*/
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #a64dff;
+  border-radius: 2px;
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  max-height: 10px;
+  -webkit-box-shadow: inset 0 0 6px #a64dff;
+  background: #a64dff;
+  transition: 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ca9eff;
+  
+}
+
+
+
+
+/* navbar */
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    background: rgb(48, 47, 47);
+    padding: 10px 0;
+    box-shadow: 0px 5px 0px #000000;
+  }
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: rgb(127, 102, 197);
+    font-family: roboto mono;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+  nav ul li a:hover {
+    color: #555;
+  }
+  
+  nav.circle ul li a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  nav.circle ul li a:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '.';
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+  }
+  nav.circle ul li a:hover:after {
+  -webkit-animation: circle 1.5s ease-in forwards;
+  }
+  
+  
+  /*KeyFrames */
+  
+  @-webkit-keyframes circle {
+    0% {
+      width: 1px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      height: 1px;
+      z-index: -1;
+      background: rgb(103, 48, 175);
+      border-radius: 100%;
+    }
+    100% {
+      background: rgb(0, 0, 0);
+      height: 5000%;
+      width: 5000%;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 0;
+    }
+  }
+  
+
+/*
+---------------------------
+      PROJECTS
+---------------------------
+*/
+
+
+/* Sections */
+
+section, footer { /* Part 5 */
+  width: 100%;
+  padding: 30px 20px 50px 20px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  height: 100%;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: #4e00bb;
+  text-shadow: 0px 0px 15px #4e00bb;
+}
+
+
+h3 {
+  font-family: 'Nunito';
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: none;
+  background: linear-gradient(135deg, #9900ff 0%, #3333cc 25%, #6600ff 50%, #c266ff 75%, #9900ff 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  animation: animate 5s ease infinite;
+}
+
+@keyframes animate {
+100%{
+    background-position: 400%;
+}
+}
+
+
+
+.section-hr {
+  width: 15%;
+  min-width: 200px;
+  margin: 20px auto;
+  border: 2px solid rgb(71, 17, 141);
+  box-shadow: 2px 2px 5px rgb(71, 17, 141);
+box-shadow:linear-gradient(135deg, #9900ff 0%, #3333cc 25%, #6600ff 50%, #c266ff 75%, #9900ff 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  animation: animate 10s ease infinite;
+}
+
+@keyframes animate {
+  100%{
+      background-position: 400%;
+  }
+  }
+
+.image-text-container {
+  display: flex;
+  gap: 2%;
+  margin-top: 50px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.text-wrapper {
+  width: 100%;
+  max-width: 600px;
+}
+.text-wrapper-desc {
+  text-align: justify;
+}
+.image-card {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16/9;
+  transition: 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px black;
+}
+.image-card:hover{
+  transform: scale(1.05);
+  box-shadow: 3px 3px 6px black;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Divide Section */
+
+.divide-section {
+  text-align: center;
+  background-color: black;
+  color: white;
+  box-shadow: 2px 2px 5px black;
+}
+.quote-text {
+  margin: 10px auto;
+  max-width: 1920px;
+  font-size: 30px;
+}
+.quote-text:before {content: open-quote;}
+.quote-text:after {content: close-quote;}
+.quote-credit {
+  font-size: 25px;
+}
+h3 {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+/* project-card changed to project-tile */
+
+.project-tile {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 16/9;
+  background-color: white;
+  box-shadow: 2px 2px 5px black;
+  border: 1px solid black;
+  transition: 0.3s ease-in-out;
+
+  }
+
+.project-tile img {
+  width: 100%;
+  height: auto;
+}
+
+.project-desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  background-color: black;
+  font-size: 20px;
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+
+.project-tile:hover .project-desc {
+  opacity: 0.8;
+  /*   cursor: pointer; --> Removed: pointer on non-clickable items is bad code  */
+z-index: 2;
+}
+
+.project-tile:hover {
+  box-shadow: 5px 5px 10px black;
+  transform: scale(1.05);
+}
+
+.view-project-button {
+  border-radius: 5px;
+  color: white;
+  border: 2px solid white;
+  width: relative;
+  font-size: 15px;
+  height: auto;
+  padding: 7px;
+  margin: 0 auto;
+  transition: 0.5s ease-in-out;
+  text-decoration: none;
+}
+
+.view-project-button:hover{
+  background-color: white;
+  color: black !important;
+  text-decoration: none;
+}
+/* project-section changed to projects */
+#projects > .text-wrapper {
+  margin: 0 auto;
+  text-align: left; /* DONT FORGET THIS */
+}
+
+#projects {
+  background-color: #000000;
+}
